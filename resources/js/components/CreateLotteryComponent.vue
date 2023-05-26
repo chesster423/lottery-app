@@ -7,7 +7,7 @@
 
                     <div class="card-body">
                         <div class="form-group">
-                            <label>Combination #1</label>
+                            <label>Entry #1</label>
                             <div class="row">
                                 <div class="col-2" v-for="(n, index) in 6" :key="index">                        
                                     <select v-model="combinations.comb1[index]" class="form-control">
@@ -22,7 +22,7 @@
                         </div>
 
                         <div class="form-group mt-3">
-                            <label>Combination #2</label>
+                            <label>Entry #2</label>
                             <div class="row">
                                 <div class="col-2" v-for="(n, index) in 6" :key="index">
                                     <select v-model="combinations.comb2[index]" class="form-control">
@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="form-group mt-3">
-                            <label>Combination #3</label>
+                            <label>Entry #3</label>
                             <div class="row">
                                 <div class="col-2" v-for="(n, index) in 6" :key="index">
                                     <select v-model="combinations.comb3[index]" class="form-control">

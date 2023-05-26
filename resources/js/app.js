@@ -17,7 +17,7 @@ Vue.use(VueToastr, {
 
 Vue.filter('formatDate', function(value) {
     if (value) {
-        return moment(String(value)).format('dddd DD MM YYYY')
+        return moment(String(value)).format('dddd DD MMMM YYYY')
     }
 });
 

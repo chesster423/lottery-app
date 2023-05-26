@@ -5536,7 +5536,7 @@ Vue.use(vue_toastr__WEBPACK_IMPORTED_MODULE_0__["default"], {
 });
 Vue.filter('formatDate', function (value) {
   if (value) {
-    return moment__WEBPACK_IMPORTED_MODULE_1___default()(String(value)).format('dddd DD MM YYYY');
+    return moment__WEBPACK_IMPORTED_MODULE_1___default()(String(value)).format('dddd DD MMMM YYYY');
   }
 });
 
@@ -50024,7 +50024,7 @@ var render = function () {
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "form-group" }, [
-              _c("label", [_vm._v("Combination #1")]),
+              _c("label", [_vm._v("Entry #1")]),
               _vm._v(" "),
               _c(
                 "div",
@@ -50096,7 +50096,7 @@ var render = function () {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group mt-3" }, [
-              _c("label", [_vm._v("Combination #2")]),
+              _c("label", [_vm._v("Entry #2")]),
               _vm._v(" "),
               _c(
                 "div",
@@ -50168,7 +50168,7 @@ var render = function () {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group mt-3" }, [
-              _c("label", [_vm._v("Combination #3")]),
+              _c("label", [_vm._v("Entry #3")]),
               _vm._v(" "),
               _c(
                 "div",

@@ -53,6 +53,7 @@
 
                         <div class="form-group mt-3">
                             <button class="btn btn-primary" v-on:click="submitCombinations()">Submit</button>
+                            <button class="btn btn-warning" v-on:click="generateCombinations()">Generate Random Entries</button>
                         </div>
                     </div>
                 </div>
@@ -91,8 +92,7 @@
                     }else{
                         response.data.errors.forEach(e => {
                             this.$toastr.w(e, "Warning!");
-                        });
-                        
+                        });                        
                     }      
                 }).catch(function (error) {
                     this.$toastr.w(error.toJSON().message, "Warning!");
@@ -107,6 +107,21 @@
                     comb2: [],
                     comb3: [],
                 };
+            },  
+            generateCombinations() {
+                this.resetCombinations();
+
+                for (const key in this.combinations) {
+                    for (let index = 0; index <= 5; index++) {
+                        var number = Math.floor(Math.random() * 58) + 1;
+                        console.log(number);
+                        if (this.combinations[`${key}`].includes(number)) {
+                            index -= 1;
+                        }else{
+                            this.combinations[`${key}`].push( this.combination_list[number] ); 
+                        }                                    
+                    }
+                }
             }
         }
     }

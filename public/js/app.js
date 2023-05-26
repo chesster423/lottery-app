@@ -5375,6 +5375,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -5419,6 +5420,20 @@ __webpack_require__.r(__webpack_exports__);
         comb2: [],
         comb3: []
       };
+    },
+    generateCombinations: function generateCombinations() {
+      this.resetCombinations();
+      for (var key in this.combinations) {
+        for (var index = 0; index <= 5; index++) {
+          var number = Math.floor(Math.random() * 58) + 1;
+          console.log(number);
+          if (this.combinations["".concat(key)].includes(number)) {
+            index -= 1;
+          } else {
+            this.combinations["".concat(key)].push(this.combination_list[number]);
+          }
+        }
+      }
     }
   }
 });
@@ -50236,6 +50251,19 @@ var render = function () {
                   },
                 },
                 [_vm._v("Submit")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-warning",
+                  on: {
+                    click: function ($event) {
+                      return _vm.generateCombinations()
+                    },
+                  },
+                },
+                [_vm._v("Generate Random Entries")]
               ),
             ]),
           ]),
